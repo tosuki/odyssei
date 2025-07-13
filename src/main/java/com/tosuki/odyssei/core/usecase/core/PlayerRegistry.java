@@ -5,12 +5,11 @@ import com.tosuki.odyssei.core.entity.PlayerAttributes;
 import com.tosuki.odyssei.core.logger.PlayerRegistryError;
 import com.tosuki.odyssei.core.repository.PlayerRepository;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class PlayerRegistry {
     private PlayerRepository playerRepository;
-
-    public PlayerRegistry(PlayerRepository playerRepository) {
-        this.playerRepository = playerRepository;
-    }
 
     public void createPlayerRegistry(String username) {
         try {
