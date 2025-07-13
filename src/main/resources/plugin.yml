@@ -1,0 +1,6 @@
+name: Odyssei
+version: 1.0
+author: tosuki
+description: A plugin created to make my experience playing minecraft enjoyable
+main: com.tosuki.odyssei.Main
+api-version: '1.20.5'
