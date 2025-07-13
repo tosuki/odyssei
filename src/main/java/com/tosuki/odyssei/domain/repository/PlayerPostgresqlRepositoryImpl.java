@@ -1,21 +1,18 @@
 package com.tosuki.odyssei.domain.repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Optional;
 
 import com.tosuki.odyssei.core.entity.Player;
 import com.tosuki.odyssei.core.repository.PlayerRepository;
+import com.tosuki.odyssei.domain.provider.PostgreSQLConnectionProvider;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class PlayerPostgresqlRepositoryImpl implements PlayerRepository {
-    /**
-     * CREATE TABLE IF NOT EXISTS players (
-     *   username VARCHAR UNIQUE NOT NULL
-     *   
-     * );
-     */
-    public void initialize() {
-        //initialize postgresql table xD
-    }
-
+    private PostgreSQLConnectionProvider connectionProvider;
     /**
      * 
      */

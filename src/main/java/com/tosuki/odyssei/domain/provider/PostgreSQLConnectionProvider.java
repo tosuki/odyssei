@@ -1,5 +1,7 @@
 package com.tosuki.odyssei.domain.provider;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import com.zaxxer.hikari.HikariConfig;
@@ -45,7 +47,9 @@ public class PostgreSQLConnectionProvider {
         this.hikariDataSource = new HikariDataSource(createHikariConfig());
     }
 
-    public void getConnection() {}
+    public Connection getConnection() throws SQLException {
+        return hikariDataSource.getConnection();
+    }
 
     public void disconnect() {
         hikariDataSource.close();
