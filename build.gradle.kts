@@ -11,7 +11,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.flywaydb:flyway-core:10.13.0")
     implementation("org.postgresql:postgresql:42.7.3")
     implementation("com.zaxxer:HikariCP:6.3.0")
 
